@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+</head>
+
+<style>
+    html,body {
+        height: 95%;
+        background-color: #1E2125;
+    }
+
+    #blank {
+        background-color: #1E2125;
+        height: 50px;
+        font-weight: lighter;
+        color: grey;
+    }
+
+    #vditor {
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+    <div id="blank">
+        <h1>Markdown Editor Online</h1>
+    </div>
+    <div id="vditor"></div>
+    <script>
+        // 第一个参数是容器的id，必填
+        // 第二个参数是配置对象，可选
+        new Vditor('vditor', {
+            height: '100%',
+            mode: 'ir',
+            theme: 'dark',
+            icon: 'ant',
+            counter:
+            {
+                enable: 'true',
+                type: 'text'
+            },
+
+            upload:
+            {
+                url: "r:/",
+            },
+
+            preview:
+            {
+                paragraphBeginningSpace:'true',
+                autoSpace: 'true',
+                theme:
+                {
+                    current:'dark'
+                }
+            },
+
+            outline:
+            {
+                enable:'true'
+            }
+
+
+
+        })
+    </script>
+</body>
